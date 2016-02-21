@@ -5,7 +5,7 @@ VOLUME ["/var/www/html", "/etc/apache2/sites-available"]
 
 RUN apt-get update && \
 	apt-get upgrade -y && \
-	apt-get install -y curl apache2 supervisor php5 php5-cli libapache2-mod-php5 \
+	apt-get install -y git curl apache2 supervisor php5 php5-cli libapache2-mod-php5 \
 		php5-mcrypt php5-curl php5-gd php5-intl && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/* \
@@ -13,7 +13,7 @@ RUN apt-get update && \
 		/var/tmp/*
 
 RUN a2enmod rewrite && php5enmod mcrypt
-RUN useradd ubuntu
+RUN useradd -m ubuntu
 
 RUN sed -ri 's/^display_errors\s*=\s*Off/display_errors = On/g' /etc/php5/apache2/php.ini && \
 	sed -ri 's/^display_errors\s*=\s*Off/display_errors = On/g' /etc/php5/cli/php.ini && \
