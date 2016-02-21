@@ -27,8 +27,6 @@ mysql:
 
 apache-php:
   build: ./apache-php-docker
-  volumes_from:
-    - composerdata
   links:
     - mysql
   ports:
@@ -36,6 +34,7 @@ apache-php:
   volumes:
     - ./apache:/etc/apache2/sites-available
     - ./:/var/www/html
+    - ./composerdata:/home/ubuntu
 
 gulp:
   image: harshjv/bower-gulp:1.0

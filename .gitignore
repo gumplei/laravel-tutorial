@@ -131,3 +131,4 @@ sftp-config.json
 
 # Exclude data folder
 data/
+composerdata/
