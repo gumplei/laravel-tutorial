@@ -6,7 +6,8 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -127,3 +128,7 @@ vendor/
 # sftp configuration file
 sftp-config.json
 
+
+# Exclude data folder
+data/
+^installer
