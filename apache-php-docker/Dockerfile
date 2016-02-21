@@ -6,7 +6,7 @@ VOLUME ["/var/www/html", "/etc/apache2/sites-available"]
 RUN apt-get update && \
 	apt-get upgrade -y && \
 	apt-get install -y git curl apache2 supervisor php5 php5-cli libapache2-mod-php5 \
-		php5-mcrypt php5-curl php5-gd php5-intl && \
+		php5-mcrypt php5-curl php5-gd php5-intl php5-mysql && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/* \
 		/tmp/* \
