@@ -39,6 +39,6 @@ apache-php:
     - ./composerdata:/home/ubuntu
 
 gulp:
-  build: ./gulp-docker
+  image: harshjv/bower-gulp:1.0
   volumes:
     - ./src:/data
