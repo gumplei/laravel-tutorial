@@ -28,7 +28,7 @@ mysql:
 #     - ./:/var/www
 
 apache-php:
-  build: ./apache-php-docker
+  image: gumplei/apache-php:latest
   links:
     - mysql
   ports:
