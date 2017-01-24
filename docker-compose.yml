@@ -5,9 +5,10 @@ composerdata:
   image: harshjv/composer-data:0.9.16-1.0
 
 mysql:
-  image: harshjv/mysql:0.9.16-1.0
+#  image: harshjv/mysql:0.9.16-1.0
+  image: mysql:5.6
   environment:
-    MYSQL_PASS: root
+    - MYSQL_ROOT_PASSWORD=root
   # volumes_from:
     # - mysqldata
   ports:
@@ -38,7 +39,7 @@ apache-php:
     - ./:/var/www/html
     - ./composerdata:/home/ubuntu
 
-gulp:
-  build: ./gulp-docker
-  volumes:
-    - ./src:/data
+#gulp:
+#  build: ./gulp-docker
+#  volumes:
+#    - ./src:/data
