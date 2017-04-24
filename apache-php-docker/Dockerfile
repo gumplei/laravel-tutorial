@@ -8,7 +8,7 @@ RUN apt-get update && \
 	apt-get install -y git curl apache2 supervisor \
 		php php-cli libapache2-mod-php php-apcu wkhtmltopdf xvfb
 RUN apt-get install -y php-mcrypt \
-		php-curl php-gd php-intl php-mysql php-xml php-mbstring php-zip 
+		php-curl php-gd php-intl php-mysql php-xml php-mbstring php-zip php-soap
 RUN apt-get clean && \
 	rm -rf /var/lib/apt/lists/* \
 		/tmp/* \
